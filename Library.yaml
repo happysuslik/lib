@@ -1,0 +1,100 @@
+--- !ruby/object:Library
+books:
+- &5 !ruby/object:Book
+  title: "Психология влияния"
+  author: &3 !ruby/object:Author
+    name: "Роберт"
+    biography: "псп"
+- &4 !ruby/object:Book
+  title: "Ментальные ловушки на работе"
+  author: &1 !ruby/object:Author
+    name: "Марк"
+    biography: "профессор"
+- &6 !ruby/object:Book
+  title: "Сила безмолвия"
+  author: &2 !ruby/object:Author
+    name: "Карлос"
+    biography: "мистик"
+- !ruby/object:Book
+  title: "Лампа"
+  author: *1
+- &10 !ruby/object:Book
+  title: "Дрын"
+  author: *2
+- &8 !ruby/object:Book
+  title: "Карусель"
+  author: *3
+orders:
+- !ruby/object:Order
+  book: *4
+  reader: &9 !ruby/object:Reader
+    name: "Петрович"
+    email: p@i.ua
+    city: "Днепр"
+    street: "Метро"
+    house: '5'
+  date: 2014-11-27 23:17:56.628272125 +02:00
+- !ruby/object:Order
+  book: *5
+  reader: &11 !ruby/object:Reader
+    name: "Михалыч"
+    email: m@i.ua
+    city: "Днепр"
+    street: "Подвал"
+    house: '10'
+  date: 2014-11-27 23:17:56.628276730 +02:00
+- !ruby/object:Order
+  book: *4
+  reader: &7 !ruby/object:Reader
+    name: "Хотабыч"
+    email: h@i.ua
+    city: "Арман"
+    street: "Хазгы"
+    house: '3'
+  date: 2014-11-27 23:17:56.628278299 +02:00
+- !ruby/object:Order
+  book: *6
+  reader: *7
+  date: 2014-11-27 23:17:56.628279411 +02:00
+- !ruby/object:Order
+  book: *8
+  reader: *9
+  date: 2014-11-27 23:17:56.628280265 +02:00
+- !ruby/object:Order
+  book: *10
+  reader: *11
+  date: 2014-11-27 23:17:56.628281186 +02:00
+- !ruby/object:Order
+  book: *10
+  reader: *9
+  date: 2014-11-27 23:17:56.628282134 +02:00
+- !ruby/object:Order
+  book: *5
+  reader: *11
+  date: 2014-11-27 23:17:56.628283168 +02:00
+- !ruby/object:Order
+  book: *4
+  reader: *7
+  date: 2014-11-27 23:17:56.628284098 +02:00
+- !ruby/object:Order
+  book: *10
+  reader: &12 !ruby/object:Reader
+    name: "Кузьмич"
+    email: s@i.ua
+    city: "Одесса"
+    street: "Деребасовская"
+    house: '2'
+  date: 2014-11-27 23:17:56.628285007 +02:00
+- !ruby/object:Order
+  book: *5
+  reader: *9
+  date: 2014-11-27 23:17:56.628285906 +02:00
+readers:
+- *9
+- *11
+- *12
+- *7
+authors:
+- *3
+- *1
+- *2
